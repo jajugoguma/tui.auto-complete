@@ -1,0 +1,15 @@
+name: Jest Test
+on: pull_request
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: npm install
+    - name: Run tests
+      run: npm run test
+    - uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        #   threshold: 80 # optional parameter
