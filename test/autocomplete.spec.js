@@ -45,7 +45,7 @@ describe('자동완성 컴포넌트를 생성하고 기능을 테스트한다.',
       autoComplete.queries = ['나이키'];
       expect(resultManager._highlight('나이키 에어')).toBe('<strong>나이키</strong> 에어');
       autoComplete.queries = ['TEST'];
-      expect(resultManager._highlight('나이키 에어')).toBe('나이키 에어1');
+      expect(resultManager._highlight('나이키 에어')).toBe('나이키 에어');
     });
 
     // OK
